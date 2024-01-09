@@ -10,6 +10,7 @@ export class AddCountComponent {
 
   @Output() Event = new EventEmitter<any>();
 
+  constructor(){}
   addCount(){
     this.number += 1;
     this.Event.emit(this.number);
