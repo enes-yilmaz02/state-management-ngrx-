@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ngrx';
+
+  number : number = 0;
+
+   addCount(event :number){
+    this.number = event ;
+   }
 }
