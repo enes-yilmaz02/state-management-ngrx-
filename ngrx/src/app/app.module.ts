@@ -11,6 +11,11 @@ import { CountServiceComponent } from './components/count-service/count-service.
 import { AddCountStateComponent } from './components/add-count-state/add-count-state.component';
 import { CountStateComponent } from './components/count-state/count-state.component';
 import { CounterReducer } from './state/counter.reducer';
+import { LayoutsComponent } from './e-commerce/layouts/layouts.component';
+import { NavbarComponent } from './e-commerce/layouts/navbar/navbar.component';
+import { HomeComponent } from './e-commerce/home/home.component';
+import { BasketsReducer } from './state/baskets/baskets.reducer';
+import { Reducers } from './state/baskets/reducers';
 
 @NgModule({
   declarations: [
@@ -20,14 +25,20 @@ import { CounterReducer } from './state/counter.reducer';
     AddCountServiceComponent,
     CountServiceComponent,
     AddCountStateComponent,
-    CountStateComponent
+    CountStateComponent,
+    LayoutsComponent,
+    NavbarComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({
-      number : CounterReducer
-    })
+    StoreModule.forRoot(
+      Reducers.baskets
+    //   {
+    //   number : CounterReducer
+    // },
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]
