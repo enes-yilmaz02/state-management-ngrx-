@@ -27,12 +27,14 @@
             Basket
             <span class="badge bg-danger">{{basketCount$}}</span>
           </a>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu px-4">
             <li>
               <a
-                class="dropdown-item"
+                class="dropdown-item p-2 mb-1 bg-info"
                 *ngFor="let basket of baskets$"
-                >{{ basket?.product.name }} {{basket?.quantity}}</a
+                ><span>Name: {{ basket?.product.name }}</span>
+                <p>Quantity: {{basket?.quantity}} && Price: {{basket?.product.unitPrice}}</p>
+                </a
               >
             </li>
           </ul>
