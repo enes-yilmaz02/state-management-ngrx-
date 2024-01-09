@@ -1,3 +1,13 @@
-<app-add-count (Event)="addCount($event)"></app-add-count>
-<hr>
-<app-count [number]="number"></app-count>
+<div class="container" style="background-color: bisque; padding: 30px; margin: 10px;">
+  <h1>Use Input Output Decarator</h1>
+  <app-add-count (Event)="addCount($event)"></app-add-count>
+  <hr>
+  <app-count [number]="number"></app-count>
+</div>
+
+<div class="container" style="background-color: rgb(247, 204, 152);padding: 30px; margin: 10px;">
+  <h1>Use Services Decarator</h1>
+  <app-add-count-service></app-add-count-service>
+  <hr>
+  <app-count-service></app-count-service>
+</div>
